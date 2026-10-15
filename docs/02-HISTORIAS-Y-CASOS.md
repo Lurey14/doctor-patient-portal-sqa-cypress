@@ -83,7 +83,7 @@ El registro de un administrador no forma parte de estas 17 páginas porque el pr
 4. Registrar fecha, resultado real y evidencia. Si una prueba falla, conservar el fallo e investigar el ambiente antes de cambiar la expectativa.
 5. Ejecutar CP-22 al final de la suite porque elimina el doctor sintético y sus citas asociadas.
 
-La matriz contiene 22 resultados históricos aprobados en la ejecución local del 14/10/2026. Para la exposición del 19/10 se debe volver a ejecutar la suite y reemplazar el estado con el resultado observado ese día.
+La ejecución local de Cypress 16.1.1 registrada el 14/10/2026 obtuvo 22 casos aprobados, 0 fallidos y 0 pendientes. CP-23 documenta la función de alta de administrador que no existe en la versión evaluada.
 
 ## Trazabilidad
 

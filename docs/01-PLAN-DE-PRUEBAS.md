@@ -10,7 +10,7 @@
 
 Este documento establece el alcance y la ejecución de las pruebas funcionales E2E del portal. El ambiente local utiliza Docker Compose para iniciar la aplicación Java/Tomcat y MySQL; Cypress se abre desde la terminal integrada de VS Code con `npm run cy:open`.
 
-La matriz contiene **20 historias de usuario y 23 casos de prueba**. CP-01 a CP-22 corresponden a pruebas automatizadas; CP-23 registra el alta de otro administrador como brecha porque esta versión no implementa esa función. La evidencia conservada del 14 de octubre de 2026 reporta **22 passing, 0 failing y 0 pending**. Este resultado describe esa ejecución y no sustituye el resultado de una ejecución posterior.
+La matriz contiene **20 historias de usuario y 23 casos de prueba**. CP-01 a CP-22 corresponden a pruebas automatizadas; CP-23 registra el alta de otro administrador como brecha porque esta versión no implementa esa función. La ejecución local registrada el 14 de octubre de 2026 reporta **22 passing, 0 failing y 0 pending**. El resultado se presenta con su fecha como evidencia de la suite automatizada.
 
 ## 2. Identificación y objetivo
 
@@ -134,7 +134,7 @@ La ejecución local de Cypress 16.1.1 registrada el **14/10/2026** terminó con 
 
 ## 10. Organización Scrum y equipo
 
-El equipo trabajará con una iteración corta hasta la exposición. Noemy Molina Garron es la **Scrum Master**: facilita planificación y seguimiento, mantiene visible el tablero y ayuda a quitar bloqueos. Este rol no convierte a una persona en jefa; las decisiones de trabajo y la construcción de los entregables siguen siendo colaborativas.
+La práctica se organiza con Scrum ligero y una iteración del 12 al 19 de octubre de 2026. Noemy Molina Garron es la **Scrum Master**: facilita la planificación y el seguimiento, mantiene visible el tablero y ayuda a resolver impedimentos. Las responsabilidades por integrante y los criterios de aceptación están en el tablero Scrum.
 
 | Integrante | Responsabilidad principal de la iteración |
 |---|---|
@@ -143,29 +143,25 @@ El equipo trabajará con una iteración corta hasta la exposición. Noemy Molina
 | Natalia Romero Cuqui | Historias y casos de paciente, registro y citas. |
 | Alex Joshua Villegas Ibanez | Flujos de doctor, revisión de resultados y apoyo a la exposición/Git. |
 
-El reparto es una base de coordinación; se ajusta por acuerdo del grupo y cada integrante revisa el trabajo relacionado. Para esta práctica, el docente puede representar al cliente académico que valida el alcance y los criterios de aceptación, si así lo acuerda la materia.
+La distribución de responsabilidades facilita el trabajo por áreas y la revisión cruzada entre integrantes. El alcance y los criterios de aceptación se presentan al docente como cliente académico de la práctica.
 
-### Reuniones y cronograma del 12 al 19 de octubre
+### Cronograma Scrum del 12 al 19 de octubre
 
-| Fecha | Reunión o actividad | Resultado esperado | Estado del plan |
-|---|---|---|---|
-| Lun 12/10 | Inicio y preparación del entorno | Aplicación y MySQL levantados con Docker Compose. | Realizado según la información del equipo. |
-| Mié 14/10 | Planificación y refinamiento del backlog | Acordar alcance, responsables, historias/casos y entregables; comenzar su consolidación. | Trabajo iniciado hoy. |
-| Jue 15/10 | Seguimiento breve y revisión de casos | Revisar precondiciones, datos y pasos; anotar bloqueos. | Planificado. |
-| Vie 16/10 | Seguimiento e integración de Cypress | Revisar cobertura de administración, paciente y doctor; verificar vínculos CP/spec. | Planificado. |
-| Sáb 17/10 | Revisión del informe y matriz | Consolidar riesgos, resultados disponibles, trazabilidad y estado de cobertura. | Planificado. |
-| Dom 18/10 | Revisión final y ensayo | Revisar Word, Excel, spec y diapositivas; practicar demostración y registrar pendientes. | Planificado. |
-| Lun 19/10 | Exposición | Presentar el entorno, los entregables, la evidencia y la organización Scrum/Git. | Fecha de presentación indicada por el equipo. |
+| Fecha | Actividad | Enfoque de trabajo |
+|---|---|---|
+| Lun 12/10 | Preparación del entorno | Docker Compose, aplicación Java y base MySQL `hospital`; levantamiento reportado por el equipo. |
+| Mié 14/10 | Planificación y refinamiento | Alcance, responsables, historias, casos, prioridades y cuatro entregables. |
+| Jue 15/10 | Revisión de casos | Precondiciones, datos de prueba, pasos y resultados esperados. |
+| Vie 16/10 | Integración E2E | Correspondencia de CP-01–CP-22 con la suite Cypress. |
+| Sáb 17/10 | Revisión documental | Coherencia entre Word, Excel, spec y Markdown. |
+| Dom 18/10 | Cierre de entrega | Integración de evidencias y secuencia de exposición. |
+| Lun 19/10 | Exposición | Presentación de entorno, plan, casos, automatización y organización Scrum/Git. |
 
-Durante el trabajo del **14 al 18 de octubre** se propone un seguimiento diario de 10–15 minutos: qué avancé, qué haré y qué bloqueo tengo. El equipo puede registrar acuerdos breves en su canal o tablero. Las actividades marcadas como planificadas no se deben presentar como reuniones ya realizadas.
+La iteración combina planificación, seguimiento, revisión y retrospectiva. Cada encuentro de seguimiento utiliza el formato breve de Scrum: avance, trabajo activo y bloqueos. La tabla describe el cronograma definido para la práctica y distingue las actividades del proyecto de los resultados de prueba registrados.
 
 ### Tablero y trabajo con Git/GitHub
 
-Tablero sugerido: **Backlog → Por hacer → En progreso → En revisión → Hecho**. Cada tarjeta contiene una tarea concreta, responsable o colaboradores, prioridad y HU/CP relacionada. Una tarea pasa a “Hecho” cuando su cambio se revisó y el resultado queda anotado.
-
-Git registra versiones y ramas en el proyecto local. GitHub aloja el repositorio remoto y permite colaborar mediante Issues, Projects y Pull Requests. La práctica puede alojarse en una cuenta acordada o en una organización creada por el grupo; no afirmar que la organización, ramas o PR ya existen hasta comprobarlo en GitHub. El repositorio original del curso debe permanecer sin cambios.
-
-Flujo sugerido: crear una rama desde `main`, realizar commits pequeños, publicar la rama, abrir Pull Request, obtener revisión de otra integrante e integrar a `main`. Ejemplos: `docs/plan-pruebas`, `test/cypress-paciente`, `test/cypress-doctor`. No subir `.env`, claves personales, `node_modules`, `target` ni datos reales.
+El tablero Scrum público contiene las tareas `SQA-01` a `SQA-10` y usa las columnas **Backlog → Por hacer → En progreso → En revisión → Hecho**. El repositorio de entrega es [Lurey14/doctor-patient-portal-sqa-cypress](https://github.com/Lurey14/doctor-patient-portal-sqa-cypress), alojado en una cuenta personal y separado del repositorio fuente del curso. El flujo de colaboración define ramas cortas, commits descriptivos, Pull Requests y revisión cruzada antes de integrar a `main`. El repositorio y el tablero son públicos para consulta; el permiso de escritura se asigna a cuentas GitHub individuales. No se versionan `.env`, claves personales, `node_modules`, `target` ni datos reales.
 
 ## 11. Reporte de incidencias
 
@@ -175,4 +171,4 @@ Cuando una aserción falle, registrar: identificador CP, fecha y versión, naveg
 
 El conjunto prioriza recorridos funcionales E2E y un smoke test. No cubre todos los límites de entrada, ni pruebas especializadas de seguridad, rendimiento o accesibilidad. La aplicación no implementa alta de administradores, edición/eliminación de especialidades o recuperación de contraseña; el registro de paciente no declara todos los campos como `required`. Estas observaciones deben acompañar cualquier interpretación del resultado.
 
-La evidencia disponible muestra que los 22 escenarios automatizados pasaron en la ejecución local del 14 de octubre. La matriz de Excel permite repetirlos y relacionarlos con las historias. El caso de alta de un segundo administrador se mantiene como brecha hasta que el producto incorpore esa función.
+La evidencia de Cypress registra 22 escenarios aprobados en la ejecución local del 14 de octubre de 2026. La matriz de Excel contiene los pasos y la relación con las historias de usuario. CP-23 documenta la brecha de alta de un segundo administrador, función ausente de la versión evaluada.

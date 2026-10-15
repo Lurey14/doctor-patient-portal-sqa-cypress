@@ -43,15 +43,27 @@ Para ejecutar todas las pruebas sin la interfaz visual, usa `npm run cy:run`.
 
 Para detener los contenedores conservando los datos locales de la base, ejecuta `docker compose stop`. Para volver a iniciarlos, ejecuta `docker compose start`. No borres el volumen de MySQL si necesitas conservar los datos de prueba.
 
-## Repositorio propio del equipo
+## Repositorio y colaboración del equipo
 
-El repositorio descargado sirve como base local y referencia. Para entregar en GitHub, el equipo debería crear un repositorio nuevo en una cuenta acordada, añadir a los cuatro integrantes y subir el proyecto con documentos, Docker y Cypress. Antes de crear o publicar el remoto, acuerden el nombre del repositorio y quién será su propietario. No subir contraseñas personales ni datos reales.
+La entrega está publicada en [Lurey14/doctor-patient-portal-sqa-cypress](https://github.com/Lurey14/doctor-patient-portal-sqa-cypress). Es un repositorio público de una cuenta personal, no una organización. El tablero Scrum y los Issues `SQA-01` a `SQA-10` están enlazados desde la página principal.
 
-## Organización sugerida de ramas
+Para editar o subir cambios, cada integrante usa su propia cuenta GitHub. La propietaria invita a Wendy, Natalia y Alex desde **Settings > Collaborators > Add people** y concede permiso de escritura. Para editar el estado del Project también se concede permiso **Write** desde **Project > … > Settings > Manage access**. No se comparten contraseñas de cuentas.
 
-- `main`: versión integrada y revisada.
-- `feat/docker-cypress`: entorno y automatización.
-- `docs/test-plan`: plan de pruebas.
-- `docs/test-cases`: historias, casos y exposición.
+## Flujo de Git
 
-Cada persona crea una rama, realiza commits pequeños y abre un Pull Request para revisión de otra integrante. La tabla de responsabilidades de la exposición es propuesta: actualícenla para reflejar el trabajo realizado realmente.
+- `main`: versión integrada de la entrega.
+- Ramas breves: `docs/plan-pruebas`, `docs/historias-casos`, `test/cypress-paciente` y `test/cypress-doctor`.
+- Commits descriptivos y Pull Requests con revisión cruzada.
+
+```powershell
+git status
+git switch main
+git pull
+git switch -c docs/plan-pruebas
+# editar y guardar los archivos de la tarea
+git add docs/01-PLAN-DE-PRUEBAS.md
+git commit -m "docs: actualizar plan de pruebas"
+git push -u origin docs/plan-pruebas
+```
+
+La matriz, el plan, la suite Cypress y la exposición comparten los identificadores HU/CP y se organizan con el tablero Scrum enlazado en el repositorio. El repositorio original del curso se conserva como fuente; la entrega es una copia académica independiente.

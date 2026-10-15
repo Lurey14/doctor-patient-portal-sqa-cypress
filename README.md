@@ -114,7 +114,7 @@ La primera corrida descarga `cypress/included:16.1.1`. El spec `cypress/e2e/test
 3. [Suite Cypress E2E](cypress/e2e/test.cy.js).
 4. [Presentación y organización Scrum/Git](entregables/04-Exposicion-Organizacion-Git.pptx).
 
-Las fuentes de documentación editables en Markdown están en [`docs/`](docs/). La distribución de tareas, estados iniciales y reuniones Scrum se encuentra en [`docs/05-TABLERO-SCRUM.md`](docs/05-TABLERO-SCRUM.md); es un plan y debe actualizarse según el trabajo que realmente se complete. Noemy Molina Garron facilita el equipo como Scrum Master. El plan sitúa el levantamiento Docker/MySQL el 12/10/2026, el trabajo y seguimientos del 14 al 18/10, y la presentación el 19/10. El caso de registro de administrador se marca como brecha porque esta aplicación solo tiene un administrador estático (`admin@gmail.com` / `admin`) y no implementa el alta de otras cuentas administrativas.
+Las fuentes de documentación editables en Markdown están en [`docs/`](docs/). La distribución de tareas, responsabilidades y cronograma Scrum está en [`docs/05-TABLERO-SCRUM.md`](docs/05-TABLERO-SCRUM.md). Noemy Molina Garron facilita el equipo como Scrum Master. El proyecto abarca el levantamiento Docker/MySQL del 12/10/2026, la iteración del 14 al 18/10 y la exposición del 19/10. CP-23 registra como brecha el alta de otras cuentas administrativas, función que esta versión no implementa. Cypress automatiza CP-01 a CP-22; la ejecución local registrada el 14/10/2026 obtuvo 22 passing, 0 failing y 0 pending.
 
 ## Repositorio compartido del equipo
 
