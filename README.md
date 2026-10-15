@@ -119,3 +119,5 @@ Las fuentes de documentación editables en Markdown están en [`docs/`](docs/). 
 ## Repositorio compartido del equipo
 
 Entrega alojada bajo la cuenta personal de Noemy: [Lurey14/doctor-patient-portal-sqa-cypress](https://github.com/Lurey14/doctor-patient-portal-sqa-cypress). El repositorio público permite consultar los archivos e Issues; para contribuir mediante push o Pull Request cada integrante debe usar su cuenta GitHub y tener los permisos correspondientes. La asignación de tareas figura por nombre completo; se necesitan los usernames para invitar a Wendy, Natalia y Alex como colaboradores con permiso de escritura.
+
+El [tablero Scrum del equipo](https://github.com/users/Lurey14/projects/1/views/1) contiene las 10 tareas SQA-01 a SQA-10; los detalles y criterios también están en [`docs/05-TABLERO-SCRUM.md`](docs/05-TABLERO-SCRUM.md). Los Issues están en [GitHub Issues](https://github.com/Lurey14/doctor-patient-portal-sqa-cypress/issues).

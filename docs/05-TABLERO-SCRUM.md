@@ -48,7 +48,7 @@ Una tarea pasa a **Hecho** cuando el artefacto está guardado en la rama/reposit
 
 ## Flujo de GitHub
 
-Usar Issues con los IDs `SQA-01` a `SQA-10`; mover las tareas por `Backlog → Por hacer → En progreso → En revisión → Hecho`. Crear ramas breves (`docs/plan-pruebas`, `test/cypress-paciente`), commits descriptivos y Pull Requests revisados por otra persona. El repositorio de entrega bajo `Lurey14` se configura para consulta pública para que el equipo vea documentos e Issues. Sin los usernames de GitHub de Wendy, Natalia y Alex no se les asigna ni invita a una cuenta; la responsabilidad se deja escrita en cada Issue por nombre completo.
+El [tablero Scrum público](https://github.com/users/Lurey14/projects/1/views/1) contiene los Issues `SQA-01` a `SQA-10`. Mover las tareas por `Backlog → Por hacer → En progreso → En revisión → Hecho` conforme ocurra el trabajo. Crear ramas breves (`docs/plan-pruebas`, `test/cypress-paciente`), commits descriptivos y Pull Requests revisados por otra persona. El [repositorio](https://github.com/Lurey14/doctor-patient-portal-sqa-cypress) es público para que el equipo consulte archivos e Issues. Sin los usernames de GitHub de Wendy, Natalia y Alex no se asigna ni invita ninguna cuenta; la responsabilidad queda escrita por nombre completo.
 
 ## División de la exposición
 

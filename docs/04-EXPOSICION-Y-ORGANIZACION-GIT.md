@@ -32,11 +32,11 @@ El siguiente tablero convierte el reparto por áreas en tareas revisables. Las p
 | SQA-05 | Revisar historias/casos de paciente y trazabilidad de citas | Natalia Romero Cuqui | 14–16/10 | HU-07 a HU-13 enlazadas con CP-08 a CP-15 y spec; revisión cruzada de Wendy | En curso |
 | SQA-06 | Revisar CP-17 a CP-21, flujos de doctor y evidencia de regresión | Alex Joshua Villegas Ibanez | 15–17/10 | Login, dashboard, atención, perfil, logout y accesos protegidos documentados con evidencia | Pendiente |
 | SQA-07 | Integrar Cypress, revisar ejecución completa y capturar resultado del 18/10 | Noemy Molina Garron; revisión de Alex | 16–18/10 | Suite ejecutada en entorno de presentación; guardar conteos y fallos reales sin alterar el resultado | Pendiente |
-| SQA-08 | Revisar Excel y preparar guion/demo de entregables y GitHub | Alex Joshua Villegas Ibanez; revisión de todo el equipo | 17–18/10 | Matriz legible; presentación ensayada; enlaces reales al repo/issues disponibles | Pendiente |
-| SQA-09 | Revisión final de cuatro entregables y acuerdos para exposición | Todo el equipo; facilita Noemy | 18/10 | Lista de control completada; brechas y pendientes comunicados con honestidad | Pendiente |
-| SQA-10 | Presentar el trabajo y explicar Scrum, cobertura y resultados | Todo el equipo | 19/10 | Cada integrante presenta su parte y responde preguntas sobre su área | Programado |
+| SQA-08 | Revisar Excel y trazabilidad de historias/casos | Natalia Romero Cuqui; revisión de Wendy | 17/10 | Matriz legible; IDs consistentes entre Excel, Markdown y Cypress | En curso |
+| SQA-09 | Preparar guion, demo y ensayo de exposición | Alex Joshua Villegas Ibanez; colaboración del equipo | 18/10 | Presentación ensayada; evidencia real del repo/Issues; cada persona conoce su sección | Pendiente |
+| SQA-10 | Revisión final de cuatro entregables y presentación | Todo el equipo; facilita Noemy | 18–19/10 | Lista de control completada; brechas y resultados comunicados con honestidad | Programado |
 
-En GitHub se recomienda reflejar cada tarea como Issue con prefijo `SQA-` y usar estados **Backlog → Por hacer → En progreso → En revisión → Hecho** en un GitHub Project o, si no está disponible, en una tabla equivalente. Mientras no se conozcan los nombres de usuario de GitHub de las tres compañeras, los Issues deben nombrar a la persona responsable en el cuerpo, sin asignar una cuenta incorrecta.
+El equipo ya tiene un [tablero Scrum público en GitHub Projects](https://github.com/users/Lurey14/projects/1/views/1) y diez [Issues SQA-01 a SQA-10](https://github.com/Lurey14/doctor-patient-portal-sqa-cypress/issues). Los estados están configurados como **Backlog → Por hacer → En progreso → En revisión → Hecho**. Las personas responsables aparecen por nombre completo en cada Issue; para habilitar escritura y asignar las Issues se necesitan sus usernames de GitHub.
 
 ## 3. Cómo aplicar Scrum al trabajo
 
@@ -141,12 +141,13 @@ Si el equipo no realizó sprints formales, reemplazar “organizamos” por “p
 4. Levantar el entorno con `docker compose up --build -d` y abrir la aplicación.
 5. Abrir Cypress desde la terminal de VS Code con `npm run cy:open`; elegir E2E Testing, el navegador y `cypress/e2e/test.cy.js`.
 6. Mostrar el resumen real de ejecución, incluyendo aprobados/fallidos, y no ocultar fallos.
-7. Mostrar el tablero, una rama y un Pull Request de GitHub solo si el equipo ya los creó. Si todavía no existe repositorio grupal, presentar el flujo como propuesta de organización.
+7. Mostrar el [tablero Scrum](https://github.com/users/Lurey14/projects/1/views/1), las tareas por responsable y el flujo de ramas/Pull Requests. No presentar ramas ni Pull Requests como creados si aún no existen.
 
 ## 8. Estado real que debe revisarse antes de entregar
 
 - Confirmar que el reparto técnico por rol refleja las tareas que cada persona realizó realmente.
-- Confirmar si trabajarán desde un repositorio personal compartido o una organización de GitHub y registrar el enlace correcto.
-- Añadir enlaces o capturas reales del tablero, ramas, commits y Pull Requests; no inventar actividad.
+- Usar el repositorio personal compartido `Lurey14/doctor-patient-portal-sqa-cypress`; no presentarlo como organización de GitHub.
+- Invitar a Wendy, Natalia y Alex con sus usernames si necesitan permiso para escribir; el repo y el tablero públicos permiten consulta sin invitación.
+- Añadir capturas reales de ramas y Pull Requests cuando existan; no inventar actividad.
 - Ejecutar Cypress en el entorno que se presentará y guardar el resultado observado.
 
