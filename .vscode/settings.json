@@ -1,0 +1,6 @@
+{
+  "terminal.integrated.env.windows": {
+    "CYPRESS_CACHE_FOLDER": "${workspaceFolder}\\.cache\\Cypress",
+    "npm_config_cache": "${workspaceFolder}\\.cache\\npm"
+  }
+}

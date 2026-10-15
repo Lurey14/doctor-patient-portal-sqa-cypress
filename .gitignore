@@ -1,0 +1,8 @@
+.env
+/target/
+/cypress-results/
+/cypress/screenshots/
+/node_modules/
+/.cache/
+/.artifact-work/
+*.inspect.ndjson

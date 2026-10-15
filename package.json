@@ -1,0 +1,13 @@
+{
+  "name": "doctor-patient-portal-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pruebas end-to-end Cypress para Doctor Patient Portal",
+  "scripts": {
+    "cy:open": "node scripts/cypress-cli.cjs open",
+    "cy:run": "node scripts/cypress-cli.cjs run --browser electron"
+  },
+  "devDependencies": {
+    "cypress": "16.1.1"
+  }
+}

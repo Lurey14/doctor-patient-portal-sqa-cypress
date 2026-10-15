@@ -1,0 +1,54 @@
+services:
+  db:
+    image: mysql:8.0.28
+    container_name: doctor-portal-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_dev_only}
+      MYSQL_DATABASE: hospital
+      MYSQL_USER: hospital_app
+      MYSQL_PASSWORD: ${DB_PASSWORD:-hospital_dev}
+    ports:
+      - "3306:3306"
+    volumes:
+      - hospital_data:/var/lib/mysql
+      - ./database/init/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p\"$${MYSQL_ROOT_PASSWORD}\" --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doctor-portal-app
+    environment:
+      DB_URL: jdbc:mysql://db:3306/hospital?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      DB_USERNAME: hospital_app
+      DB_PASSWORD: ${DB_PASSWORD:-hospital_dev}
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  cypress:
+    image: cypress/included:16.1.1
+    working_dir: /e2e
+    entrypoint: ["cypress", "run", "--browser", "chrome"]
+    environment:
+      CYPRESS_baseUrl: http://app:8080
+    volumes:
+      - ./cypress:/e2e/cypress:ro
+      - ./cypress.config.js:/e2e/cypress.config.js:ro
+      - ./cypress-results:/tmp/cypress-screenshots
+    depends_on:
+      - app
+    profiles: ["e2e"]
+
+volumes:
+  hospital_data:
